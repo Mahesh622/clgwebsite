@@ -117,6 +117,7 @@
       </div>
 
 
+      <form action="contact.html">
       <div class="site-section">
         <div class="container">
           <div class="row">
@@ -173,6 +174,7 @@
           
         </div>
       </div>
+      </form>
       
       <!-- <div class="section-bg style-1" style="background-image: url('images/hero_1.jpg');"> -->
         <!-- <div class="container"> -->
@@ -436,11 +438,11 @@
   </body>
   <script>
     function checkform(){
-        var a=document.getElementById('fname');
-        var b=document.getElementById('lname');
-        var c=document.getElementById('eaddress');
-        var d=document.getElementById('tel');
-        var e=document.getElementById('message');
+        var a=document.getElementById('fname').value;
+        var b=document.getElementById('lname').value;
+        var c=document.getElementById('eaddress').value;
+        var d=document.getElementById('tel').value;
+        var e=document.getElementById('message').value;
         var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
         console.log(a)
         if((a=="")||(b=="")||(c=="")||(d=="")||(e=="")){
@@ -464,7 +466,9 @@
             alert("PhoneNo cannot have characters");
             return false;
         }
-        
+        else{
+          alert("Registration successful")
+        }
         
     }
 </script>
