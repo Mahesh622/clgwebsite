@@ -151,7 +151,7 @@
 
               <div class="row">
                 <div class="col-12">
-                  <input type="submit" value="Send Message" class="btn btn-primary btn-lg px-5">
+                  <input type="submit" value="Send Message" class="btn btn-primary btn-lg px-5" onclick="checkform()">
                 </div>
               </div>
             </div>
@@ -159,10 +159,10 @@
               <div class="mb-3 bg-white">
                 <h3 class="mb-5 text-black">Contact Info</h3>
                 <p class="mb-0 font-weight-bold text-black">Address</p>
-                <p class="mb-4 text-black">SN, Sakinaka, Ghatkopar, Mumbai</p>
+                <p class="mb-4 text-black">Ghatkopar, Mumbai</p>
 
                 <p class="mb-0 font-weight-bold text-black">Phone</p>
-                <p class="mb-4"><a href="#">8291224544</a></p>
+                <p class="mb-4"><a href="#">0123401234</a></p>
 
                 <p class="mb-0 font-weight-bold text-black">Email Address</p>
                 <p class="mb-0"><a href="#">contact@sconnect.com</a></p>
@@ -349,7 +349,7 @@
               <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
                 <img src="images/person_4.jpg" alt="Image" class="img-fluid mr-3">
                 <div>
-                  <h3>dipen mav</h3>
+                  <h3>Dipen mav</h3>
                   <span>Designer</span>
                 </div>
               </div>
@@ -434,5 +434,39 @@
     <script src="js/main.js"></script>
 
   </body>
+  <script>
+    function checkform(){
+        var a=document.getElementById('fname');
+        var b=document.getElementById('lname');
+        var c=document.getElementById('eaddress');
+        var d=document.getElementById('tel');
+        var e=document.getElementById('message');
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    
+        if((a=="")||(b=="")||(c=="")||(d=="")||(e=="")){
+            alert("All Details must be filled!!");
+            return false;
+        }
+       // if(d<=0){
+         //   alert("Invalid Email");
+           // return false;
+        //}
+    
+        if(reg.test(c) == false){
+            alert("Invalid Email ID!!");
+            return false;
+        }
+        if((d.length!=10)){
+            alert(" Phone no must be 10 digit!!");
+            return false;
+        }
+        if(isNaN(d)){
+            alert("PhoneNo cannot have characters");
+            return false;
+        }
+        
+        
+    }
+</script>
 
   </html>
